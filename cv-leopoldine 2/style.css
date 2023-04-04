@@ -1,0 +1,202 @@
+/* Couleurs */
+:root {
+  --bg-color: #191919;
+  --primary-color: #333;
+  --text-color: #fff;
+  --section-bg-color: #222;
+  --footer-bg-color: #333;
+}
+
+/* Styles généraux */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.5;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Styles de l'en-tête */
+header {
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  padding: 40px 0;
+}
+
+header h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+header img {
+  display: block;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+/* Styles du tab de navigation */
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #333;
+  padding: 10px;
+}
+
+
+nav ul {
+list-style: none;
+display: flex;
+}
+
+nav ul li {
+margin-right: 20px;
+}
+
+nav ul li:last-child {
+margin-right: 0;
+}
+
+nav ul li a {
+color: white;
+text-decoration: none;
+transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+color: #ccc;
+}
+
+nav a {
+  color: #222;
+  text-decoration: none;
+  border: 1px solid var #333;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 0 5px;
+  font-size: 1.2rem;
+}
+
+nav a:hover {
+  color: #191919;
+}
+
+/* Styles des sections */
+section {
+  margin: 60px 0;
+  background-color: var(--bg-color);
+  padding: 40px;
+  border-radius: 5px;
+  transition: 0.5s;
+}
+
+section:hover {
+  background-color: var(--section-bg-color);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+section ul {
+  list-style: none;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+section ul li {
+  padding-left: 30px;
+  position: relative;
+}
+
+section ul li:before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  font-size: 1.5rem;
+}
+
+section p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.project {
+  margin-bottom: 40px;
+}
+
+.project h3 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.project img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Styles du footer */
+footer {
+  background-color: var(--footer-bg-color);
+  padding: 40px 0;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul li {
+  margin-right: 20px;
+}
+
+footer ul li:last-child {
+  margin-right: 0;
+}
+
+footer ul li a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  text-align: center;
+  line-height: 40px;
+  transition: all 0.3s ease;
+}
+
+footer ul li a:hover {
+  transform: translateY(-5px);
+}
+
+/* Styles des animations */
+.animate {
+  opacity: 0;
+  animation: fade-in 2s ease forwards;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
